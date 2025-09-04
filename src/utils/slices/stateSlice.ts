@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     counter:0,
+    isNavbarMinimized: false,
 }
 
 const stateSlice = createSlice({
@@ -10,9 +11,12 @@ const stateSlice = createSlice({
     reducers: {
         incrementCounter: (state) => {
             state.counter++;
+        },
+        setIsNavbarMinimized: (state, action) => {
+            state.isNavbarMinimized = action.payload;
         }
     }
 })
 
-export const {incrementCounter} = stateSlice.actions;
+export const {incrementCounter,setIsNavbarMinimized} = stateSlice.actions;
 export default stateSlice.reducer;

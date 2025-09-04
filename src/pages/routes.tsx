@@ -1,6 +1,6 @@
 import '../assets/index.css'
 import { LayoutSelector } from '../layouts/layoutExports';
-import { Explore, Home, Messages, Profile, Reels, Search } from './pageExports';
+import { Explore, Home, Messages, Profile, Reels } from './pageExports';
 import {
     createRoute,
     createRouter,
@@ -15,12 +15,6 @@ export const homeRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: "/",
     component: () => <Home />,
-});
-
-export const searchRoute = createRoute({
-    getParentRoute: () => rootRoute,
-    path: "/search",
-    component: () => <Search />,
 });
 
 export const exploreRoute = createRoute({
@@ -48,6 +42,6 @@ export const profileRoute = createRoute({
 });
 
 
-const routeTree = rootRoute.addChildren([homeRoute, searchRoute, exploreRoute, reelsRoute, messagesRoute, profileRoute]);
+const routeTree = rootRoute.addChildren([homeRoute, exploreRoute, reelsRoute, messagesRoute, profileRoute]);
 
 export const router = createRouter({ routeTree });

@@ -2,7 +2,7 @@ import { Camera, Circle, CircleUserRound, Compass, Cross, Heart, Menu, Plus, Sea
 
 type SidebarTab = {
     id: number,
-    title: String,
+    title: string,
     Icon: React.FC<any>,
     link?: string,
 };
