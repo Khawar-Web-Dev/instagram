@@ -11,7 +11,7 @@ type UserCardProps = {
 }
 
 
-const UserCard = ({user,id1,search,imgUrl}:UserCardProps) => {
+const UserCard = ({user,search,imgUrl}:UserCardProps) => {
 
   // const {id,name,profilePic} = useSelector((state):any => state.userData);
   const [userImage, setuserImage] = useState("");

@@ -21,16 +21,16 @@ type PostCardProps = {
 
 
 
-const PostCard = ({ verified, userId, userImage, caption, img, likes, timePosted, postId, likedp, savedp, comments }:PostCardProps) => {
+const PostCard = ({ verified, userId, caption, img, likes, timePosted, postId, likedp, savedp, comments }:PostCardProps) => {
 
     const [time, setTime] = useState('');
     const [liked, setliked] = useState(likedp)
-    const [postLikes, setpostLikes] = useState(likes);
+    const [postLikes, _setpostLikes] = useState(likes);
     const [saved, setsaved] = useState(savedp);
     const [comment, setcomment] = useState("");
     const [contextMenu, setcontextMenu] = useState(false);
-    const [isLikeLoading, setisLikeLoading] = useState(false);
-    const [isSaveLoading, setisSaveLoading] = useState(false);
+    const [isLikeLoading, _setisLikeLoading] = useState(false);
+    const [isSaveLoading, _setisSaveLoading] = useState(false);
     
 
     useEffect(() => {
